@@ -2,7 +2,7 @@ from torchvision import transforms, datasets
 
 
 
-from utils.utils import TwoCropTransform
+from utils import TwoCropTransform
 from prime_trex_combined import CombinedDataset
 import torch
 from resnet import SupConResNet, SupConResNet_Original
