@@ -1,7 +1,7 @@
 from torchvision import transforms, datasets
 
 
-from datasets.biomarker import BiomarkerDatasetAttributes
+
 from utils.utils import TwoCropTransform
 from prime_trex_combined import CombinedDataset
 import torch
