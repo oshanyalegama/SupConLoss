@@ -1,15 +1,12 @@
 from torchvision import transforms, datasets
 
-from datasets.oct_dataset import OCTDataset
+
 from datasets.biomarker import BiomarkerDatasetAttributes
 from utils.utils import TwoCropTransform
-from datasets.prime import PrimeDatasetAttributes
-from datasets.prime_trex_combined import CombinedDataset
-from datasets.recovery import recovery
-from datasets.trex import TREX
+from prime_trex_combined import CombinedDataset
 import torch
-from models.resnet import SupConResNet, SupConResNet_Original
-from loss.loss import SupConLoss
+from resnet import SupConResNet, SupConResNet_Original
+from loss import SupConLoss
 import torch.backends.cudnn as cudnn
 try:
     import apex
