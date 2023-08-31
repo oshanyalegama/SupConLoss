@@ -18,7 +18,7 @@ def train_OCT_multilabel(train_loader, model, classifier, criterion, optimizer, 
     top1 = AverageMeter()
     device = opt.device
     end = time.time()
-    for idx, (image, bio_tensor,eye_id,bcva,cst,patient) in enumerate(train_loader):
+    for idx, (image, bio_tensor) in enumerate(train_loader):
         data_time.update(time.time() - end)
 
         images = image.to(device)
@@ -70,7 +70,7 @@ def validate_multilabel(val_loader, model, classifier, criterion, opt):
     out_list = []
     with torch.no_grad():
         end = time.time()
-        for idx, (image, bio_tensor,eye_id,bcva,cst,patient) in enumerate(val_loader):
+        for idx, (image, bio_tensor) in enumerate(val_loader):
             images = image.float().to(device)
 
             labels = bio_tensor
