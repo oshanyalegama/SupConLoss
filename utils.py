@@ -11,6 +11,7 @@ import torch.backends.cudnn as cudnn
 from torchvision import transforms, datasets
 from loss import add_kd_loss
 from biomarker_multi_complete import BiomarkerDatasetAttributes_MultiLabel_Complete
+from biomarker_multi import BiomarkerDatasetAttributes_MultiLabel
 
 import torch.nn as nn
 def set_model(opt):
