@@ -20,26 +20,12 @@ class BiomarkerDatasetAttributes_MultiLabel(data.Dataset):
         image = np.array(image)
         image = Image.fromarray(image)
         image = self.transforms(image)
-        atrophy = self.df.iloc[idx,2]
-        EZ = self.df.iloc[idx,3]
-        DRIL = self.df.iloc[idx,4]
-        IR_hemm = self.df.iloc[idx,5]
-        ir_hrf = self.df.iloc[idx,6]
-        partial_vit = self.df.iloc[idx,7]
-        full_vit = self.df.iloc[idx,8]
-        preret_tiss = self.df.iloc[idx,9]
-        vit_deb = self.df.iloc[idx,10]
-        vmt = self.df.iloc[idx,11]
-        drt = self.df.iloc[idx,12]
-        fluid_irf = self.df.iloc[idx,13]
-        fluid_srf = self.df.iloc[idx,14]
-
-        rpe = self.df.iloc[idx,15]
-        ga = self.df.iloc[idx,18]
-        shrm = self.df.iloc[idx,19]
-        eye_id = self.df.iloc[idx,22]
-        bcva = self.df.iloc[idx,23]
-        cst = self.df.iloc[idx,24]
-        patient = self.df.iloc[idx,25]
-        bio_tensor = torch.tensor([fluid_irf,drt,ir_hrf,full_vit,partial_vit])
-        return image, bio_tensor,eye_id,bcva,cst,patient
+        B1 = self.df.iloc[idx,1]
+        B2 = self.df.iloc[idx,2]
+        B3 = self.df.iloc[idx,3]
+        B4 = self.df.iloc[idx,4]
+        B5 = self.df.iloc[idx,5]
+        B6 = self.df.iloc[idx,6]
+        
+        bio_tensor = torch.tensor([B1, B2, B3, B4, B5, B6])
+        return image, bio_tensor
