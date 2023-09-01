@@ -97,6 +97,7 @@ def validate_multilabel(val_loader, model, classifier, criterion, opt):
 
     label_array = np.array(label_list)
     out_array = np.array(out_list)
+    np.save('output',out_array)
     out_array = np.concatenate(out_list, axis=0)
     r = roc_auc_score(label_array, out_array, average='macro')
 
