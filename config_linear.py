@@ -45,7 +45,7 @@ def parse_option():
     parser.add_argument('--results_dir_contrastive', type=str, default='/home/kiran/Desktop/Dev/SupCon_OCT_Clinical/results.txt')
     parser.add_argument('--img_dir', type=str, default='image directory')
     parser.add_argument('--model_type', type=str, default='bcva')
-    parser.add_argument('--multi', type=int, default=0)
+    parser.add_argument('--multi', type=int, default=1)
     parser.add_argument('--noise_analysis', type=int, default=0)
     parser.add_argument('--severity_analysis', type=int, default=0)
     parser.add_argument('--dataset', type=str, default='Prime',
