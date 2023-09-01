@@ -75,7 +75,7 @@ def validate_multilabel(val_loader, model, classifier, criterion, opt):
 
             labels = bio_tensor
             labels = labels.float()
-            print(idx)
+            
             label_list.append(labels.squeeze().detach().cpu().numpy())
             labels = labels.to(device)
             bsz = labels.shape[0]
