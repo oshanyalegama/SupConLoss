@@ -36,7 +36,7 @@ def set_model(opt):
         model = SupConResNet_Original(name=opt.model)
         criterion = torch.nn.BCEWithLogitsLoss()
 
-        classifier = LinearClassifier(name=opt.model, num_classes=5)
+        classifier = LinearClassifier(name=opt.model, num_classes=6)
 
     elif (opt.multi == 1 and opt.super != 3):
         model = SupConResNet_Original(name=opt.model)
