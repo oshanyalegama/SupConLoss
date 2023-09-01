@@ -1,5 +1,5 @@
 from __future__ import print_function
-from config.config_linear import parse_option
+from config_linear import parse_option
 from training_one_epoch_ckpt_multi import main_multilabel
 try:
     import apex
