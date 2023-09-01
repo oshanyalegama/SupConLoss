@@ -49,4 +49,5 @@ if __name__ == '__main__':
         main_multilabel()
 
     else:
+        print('yeah')
         main()
