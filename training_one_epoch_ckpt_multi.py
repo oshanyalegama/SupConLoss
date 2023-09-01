@@ -1,10 +1,10 @@
 import torch
-from utils.utils import AverageMeter,warmup_learning_rate
+from utils import AverageMeter,warmup_learning_rate
 import sys
 import time
 import numpy as np
-from config.config_linear import parse_option
-from utils.utils import set_loader_new, set_model, set_optimizer, adjust_learning_rate, accuracy_multilabel
+from config_linear import parse_option
+from utils import set_loader_new, set_model, set_optimizer, adjust_learning_rate, accuracy_multilabel
 from sklearn.metrics import average_precision_score,roc_auc_score, classification_report
 import pandas as pd
 def train_OCT_multilabel(train_loader, model, classifier, criterion, optimizer, epoch, opt):
