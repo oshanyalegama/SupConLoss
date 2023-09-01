@@ -49,5 +49,5 @@ if __name__ == '__main__':
         main_multilabel()
 
     else:
-        print('opt.multi, opt.super')
+        print(opt.multi, opt.super)
         main()
